@@ -1,14 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { Platform, StyleSheet, View } from 'react-native';
+import { Image } from 'expo-image';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,3 +9,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Image
+        style={{ width: 128, height: 128 }}
+        contentFit="contain"
+        transition={1000}
+        source={{
+          uri: 'http://kf.local:3000?platform=' + Platform.OS + '&color=%230000ff&otherParam=willBeCutOff',
+          width: 32,
+          height: 32,
+        }}
+      />
+    </View>
+  );
+}
