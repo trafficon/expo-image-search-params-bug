@@ -18,7 +18,7 @@ export default function App() {
         contentFit="contain"
         transition={1000}
         source={{
-          uri: 'http://kf.local:3000?platform=' + Platform.OS + '&color=%230000ff&otherParam=willBeCutOff',
+          uri: 'http://localhost:3000?platform=' + Platform.OS + '&color=%230000ff&otherParam=willBeCutOff',
           width: 32,
           height: 32,
         }}
